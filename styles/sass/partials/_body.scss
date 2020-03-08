@@ -3,19 +3,19 @@
 ============================== */
 
 html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-  font-family: "Helvetica", Arial, sans-serif, "Courier New", monospace, serif;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	font-family: "Helvetica", Arial, sans-serif, "Courier New", monospace, serif;
 }
 
 .wrapper {
-  max-width: 1100px;
-  width: 90%;
-  margin: 0 auto;
+	max-width: 1100px;
+	width: 90%;
+	margin: 0 auto;
 }
 
 img {
-  width: 100%;
+	width: 100%;
 }
 
 /* ==============================
@@ -27,47 +27,50 @@ h2,
 h3,
 p,
 a {
-  font-family: $font-1;
-  line-height: 1.5;
+	font-family: $font-1;
+	line-height: 1.5;
+	letter-spacing: 0.5px;
+	word-spacing: 0.16rem;
 }
 
 h1,
 h2 {
-  font-size: 4.8rem;
+	font-size: 4.8rem;
 }
 
 h1 {
-  color: $color-1;
+	color: $color-1;
 }
 
 h2 {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 h3 {
-  font-size: 3.6rem;
-  font-weight: 400;
+	font-size: 3.6rem;
+	font-weight: 400;
 }
 
 p,
 a {
-  font-size: 1.6rem;
+	font-size: 1.6rem;
 }
 
 li {
-  list-style: none;
+	list-style: none;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
-.font-light {
-  font-weight: 300;
+.fontLight {
+	font-weight: 300;
 }
 
-.font-bold {
-  font-weight: 600;
+.lineBreak::before {
+	content: "\A";
+	white-space: pre;
 }
 
 /* ==============================
@@ -75,53 +78,57 @@ a {
 ============================== */
 
 nav {
-  background-color: $color-1;
-  border-top: 1px solid $color-2;
-  padding: 2rem;
+	background-color: $color-1;
+	border-top: 1px solid $color-2;
+	padding: 2rem;
+	position: sticky;
+	top: 0;
 }
 
 .navBar {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-  &__logo img {
-    // min-width: 8rem;
-    height: 3.2rem;
-  }
+	&__logo img {
+		min-width: 125px;
+		height: 3.2rem;
+	}
 
-  &__navLeft {
-    display: flex;
-  }
+	&__navLeft {
+		display: flex;
+	}
 
-  &__menuLeft,
-  &__menuRight {
-    text-transform: uppercase;
-    display: flex;
+	&__menuLeft,
+	&__menuRight {
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
 
-    a {
-      color: $color-3;
-    }
-  }
+		a {
+			color: $color-3;
+		}
+	}
 
-  &__menuLeft {
-    justify-content: flex-start;
+	&__menuLeft {
+		justify-content: flex-start;
 
-    a {
-      padding-right: 2rem;
-    }
-  }
+		a {
+			padding-right: 2rem;
+		}
+	}
 
-  &__menuRight {
-    justify-content: flex-end;
+	&__menuRight {
+		justify-content: flex-end;
 
-    a {
-      padding-left: 2rem;
-    }
-  }
+		a {
+			padding-left: 2rem;
+		}
+	}
 }
 
 /* ==============================
-   SECTION PADDING
+   SECTIONS PADDING
 ============================== */
 
 .intro,
@@ -131,7 +138,7 @@ nav {
 .social__youTube,
 .quotes,
 .getStarted {
-  padding: 10rem 5rem;
+	padding: 10rem 5rem;
 }
 
 /* ==============================
@@ -139,36 +146,38 @@ nav {
 ============================== */
 
 .intro {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
 
-  &__businessImg {
-    img {
-      height: 60rem;
-      flex-grow: 1;
-    }
-  }
+	&__businessImg {
+		margin-left: 2rem;
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+		img {
+			height: 60rem;
+		}
+	}
 
-    p {
-      font-size: 2.4rem;
-      color: $color-1;
-    }
-  }
+	&__content {
+		display: flex;
+		flex-direction: column;
+		width: 60%;
 
-  &__button--pink {
-    background-color: $color-2;
-    padding: 1rem 5rem;
-    border-radius: 5px;
-    text-align: center;
-    text-transform: uppercase;
-    color: $color-3;
-  }
+		p {
+			font-size: 2.4rem;
+			color: $color-1;
+		}
+	}
+
+	&__button--pink {
+		display: inline-block;
+		background-color: $color-2;
+		padding: 1rem 5rem;
+		border-radius: 5px;
+		text-align: center;
+		text-transform: uppercase;
+		color: $color-3;
+	}
 }
 
 /* ==============================
@@ -176,26 +185,29 @@ nav {
 ============================== */
 
 .mediaBuy {
-  background-color: $color-1;
+	background-color: $color-1;
 
-  &__content {
-    text-align: center;
-    color: $color-3;
-  }
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: $color-3;
+	}
 
-  &__copy {
-    text-align: center;
-    padding: 0 15rem;
-  }
+	&__copy {
+		text-align: center;
+		width: 60%;
+	}
 
-  &__arrowLink {
-    margin-top: 4rem;
-    img {
-      //   width: 10%;
-      height: 3rem;
-      rotate: -90deg;
-    }
-  }
+	&__arrowLink {
+		margin-top: 4rem;
+		img {
+			//   width: 10%;
+			height: 3rem;
+			rotate: -90deg;
+		}
+	}
 }
 
 /* ==============================
@@ -203,42 +215,50 @@ nav {
 ============================== */
 
 .social {
-  color: $color-5;
+	color: $color-5;
 
-  &__facebook,
-  &__instagram,
-  &__youTube {
-    display: flex;
-    align-items: center;
-  }
+	&__facebook,
+	&__instagram,
+	&__youTube {
+		display: flex;
+		align-items: center;
+	}
 
-  &__instagram {
-    flex-direction: row-reverse;
-  }
+	&__instagram {
+		flex-direction: row-reverse;
+	}
 
-  &__facebookCopy,
-  &__instagramCopy,
-  &__youTubeCopy {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-  }
+	&__facebookCopy,
+	&__instagramCopy,
+	&__youTubeCopy {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+	}
 
-  &__platformImg {
-    width: 50%;
-  }
+	&__platformImg {
+		img {
+			height: 50rem;
+		}
+	}
 
-  &__buttonLink {
-    margin-top: 2rem;
-  }
+	&__buttonLink {
+		margin-top: 2rem;
+	}
 
-  &__button--outline {
-    color: $color-4;
-    text-transform: uppercase;
-    border: 1px solid $color-4;
-    border-radius: 5px;
-    padding: 2rem 5rem;
-  }
+	&__button--outline {
+		display: inline-block;
+		color: $color-4;
+		text-transform: uppercase;
+		border: 1px solid $color-4;
+		border-radius: 5px;
+		padding: 2rem 5rem;
+
+		&:hover {
+			background-color: $color-1;
+			color: $color-3;
+		}
+	}
 }
 
 /* ==============================
@@ -246,28 +266,32 @@ nav {
 ============================== */
 
 .quotes {
-  color: $color-3;
-  background-image: url("https://1d6uol1756s63dcmhp5yd8og-wpengine.netdna-ssl.com/wp-content/uploads/2018/06/BG_Hills_Banner.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 70rem;
-  display: flex;
-  justify-content: center;
+	color: $color-3;
+	background-image: url("https://1d6uol1756s63dcmhp5yd8og-wpengine.netdna-ssl.com/wp-content/uploads/2018/06/BG_Hills_Banner.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 70rem;
+	display: flex;
+	justify-content: center;
 
-  &__hills {
-    display: flex;
-    align-items: center;
-    padding: 0 10rem;
-  }
+	&__hills {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 10rem;
+	}
 
-  &__hillsCopy {
-    text-align: center;
-  }
+	&__hillsCopy {
+		margin-left: 5rem;
+		width: 70%;
+	}
 
-  &__hillsLogo {
-    width: 40%;
-  }
+	&__hillsLogo {
+		img {
+			height: 10rem;
+		}
+	}
 }
 
 /* ==============================
@@ -275,13 +299,13 @@ nav {
 ============================== */
 
 .getStarted {
-  text-align: center;
-  color: $color-5;
+	text-align: center;
+	color: $color-5;
 
-  &__copy {
-    padding: 0 20rem;
-  }
-  &__buttonLink {
-    margin-top: 5rem;
-  }
+	&__copy {
+		padding: 0 20rem;
+	}
+	&__buttonLink {
+		margin-top: 5rem;
+	}
 }
