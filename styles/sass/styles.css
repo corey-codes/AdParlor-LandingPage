@@ -1,0 +1,546 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201c \201d \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body,
+figure {
+  margin: 0;
+}
+
+legend,
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.visuallyHidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0);
+  overflow: hidden;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* ==============================
+   COLORS
+============================== */
+/* ==============================
+   FONTS
+============================== */
+/* ==============================
+   PAGE SET UP
+============================== */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: "Helvetica", Arial, sans-serif, "Courier New", monospace, serif;
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+/* ==============================
+   STANDARD BODY STYLES
+============================== */
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: "Helvetica";
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-size: 4.8rem;
+}
+
+h1 {
+  color: #34495e;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+
+p,
+a {
+  font-size: 1.6rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+/* ==============================
+   NAVIGATION
+============================== */
+nav {
+  background-color: #34495e;
+  border-top: 1px solid #ff3366;
+  padding: 2rem;
+}
+
+.navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navBar__logo img {
+  height: 3.2rem;
+}
+
+.navBar__navLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navBar__menuLeft, .navBar__menuRight {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navBar__menuLeft a, .navBar__menuRight a {
+  color: #f4f7f9;
+}
+
+.navBar__menuLeft {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.navBar__menuLeft a {
+  padding-right: 2rem;
+}
+
+.navBar__menuRight {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navBar__menuRight a {
+  padding-left: 2rem;
+}
+
+/* ==============================
+   SECTION PADDING
+============================== */
+.intro,
+.mediaBuy,
+.social__facebook,
+.social__instagram,
+.social__youTube,
+.quotes,
+.getStarted {
+  padding: 10rem 5rem;
+}
+
+/* ==============================
+   INTRO
+============================== */
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro__businessImg img {
+  height: 60rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.intro__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.intro__content p {
+  font-size: 2.4rem;
+  color: #34495e;
+}
+
+.intro__button--pink {
+  background-color: #ff3366;
+  padding: 1rem 5rem;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f4f7f9;
+}
+
+/* ==============================
+   MEDIA BUYING
+============================== */
+.mediaBuy {
+  background-color: #34495e;
+}
+
+.mediaBuy__content {
+  text-align: center;
+  color: #f4f7f9;
+}
+
+.mediaBuy__copy {
+  text-align: center;
+  padding: 0 15rem;
+}
+
+.mediaBuy__arrowLink {
+  margin-top: 4rem;
+}
+
+.mediaBuy__arrowLink img {
+  height: 3rem;
+  rotate: -90deg;
+}
+
+/* ==============================
+   SOCIAL
+============================== */
+.social {
+  color: #333031;
+}
+
+.social__facebook, .social__instagram, .social__youTube {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social__instagram {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.social__facebookCopy, .social__instagramCopy, .social__youTubeCopy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.social__platformImg {
+  width: 50%;
+}
+
+.social__buttonLink {
+  margin-top: 2rem;
+}
+
+.social__button--outline {
+  color: #5b5a5b;
+  text-transform: uppercase;
+  border: 1px solid #5b5a5b;
+  border-radius: 5px;
+  padding: 2rem 5rem;
+}
+
+/* ==============================
+   QUOTES
+============================== */
+.quotes {
+  color: #f4f7f9;
+  background-image: url("https://1d6uol1756s63dcmhp5yd8og-wpengine.netdna-ssl.com/wp-content/uploads/2018/06/BG_Hills_Banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 70rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.quotes__hills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10rem;
+}
+
+.quotes__hillsCopy {
+  text-align: center;
+}
+
+.quotes__hillsLogo {
+  width: 40%;
+}
+
+/* ==============================
+   GET STARTED
+============================== */
+.getStarted {
+  text-align: center;
+  color: #333031;
+}
+
+.getStarted__copy {
+  padding: 0 20rem;
+}
+
+.getStarted__buttonLink {
+  margin-top: 5rem;
+}
+/*# sourceMappingURL=styles.css.map */
