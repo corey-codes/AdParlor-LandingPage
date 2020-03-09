@@ -19,6 +19,23 @@ img {
 }
 
 /* ==============================
+   REMOVE DEFAULTS
+============================== */
+
+li {
+	list-style: none;
+}
+
+ul {
+	padding-left: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ==============================
    STANDARD BODY STYLES
 ============================== */
 
@@ -56,14 +73,6 @@ a {
 	font-size: 1.6rem;
 }
 
-li {
-	list-style: none;
-}
-
-a {
-	text-decoration: none;
-}
-
 .fontLight {
 	font-weight: 300;
 }
@@ -73,30 +82,41 @@ a {
 	white-space: pre;
 }
 
+a:focus {
+	outline: 3px dotted $color-2;
+	border-radius: 5px;
+}
+
 /* ==============================
-   NAVIGATION
+   NAV BAR
 ============================== */
 
 nav {
 	background-color: $color-1;
 	border-top: 1px solid $color-2;
 	padding: 2rem;
-	position: sticky;
-	top: 0;
+	display: flex;
+	// position: fixed;
 }
 
 .navBar {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 
-	&__logo img {
-		min-width: 125px;
-		height: 3.2rem;
+	&__logo {
+		margin-right: 2rem;
+
+		img {
+			min-width: 125px;
+			height: 3.2rem;
+		}
 	}
 
-	&__navLeft {
+	&__menuLists {
+		width: 100%;
 		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	&__menuLeft,
@@ -113,17 +133,46 @@ nav {
 	&__menuLeft {
 		justify-content: flex-start;
 
-		a {
+		li {
 			padding-right: 2rem;
 		}
 	}
 
 	&__menuRight {
 		justify-content: flex-end;
+		text-align: left;
 
-		a {
+		li {
 			padding-left: 2rem;
 		}
+	}
+
+	/* ==============================
+     MOBILE NAV
+  ============================== */
+
+	&__mobileNav {
+		display: none;
+		position: fixed;
+		top: 0rem;
+		right: 5rem;
+		padding: 2rem;
+
+		span {
+			display: block;
+			width: 2.9rem;
+			height: 0.4rem;
+			background-color: $color-2;
+			margin: 0.65rem;
+			transition: all 0.3s ease;
+		}
+	}
+
+	&__mobileContainer {
+		background-color: $color-1;
+		padding: 0.8rem;
+		border-radius: 5rem;
+		text-align: right;
 	}
 }
 
@@ -152,6 +201,7 @@ nav {
 
 	&__businessImg {
 		margin-left: 2rem;
+		width: calc(40% - 2rem);
 
 		img {
 			height: 60rem;
@@ -176,7 +226,13 @@ nav {
 		border-radius: 5px;
 		text-align: center;
 		text-transform: uppercase;
-		color: $color-3;
+		color: $color-6;
+		font-weight: 600;
+
+		&:hover,
+		&:focus {
+			background-color: darken($color: $color-2, $amount: 18%);
+		}
 	}
 }
 
@@ -202,10 +258,10 @@ nav {
 
 	&__arrowLink {
 		margin-top: 4rem;
+
 		img {
-			//   width: 10%;
 			height: 3rem;
-			rotate: -90deg;
+			transform: rotate(0.75turn);
 		}
 	}
 }
@@ -237,6 +293,7 @@ nav {
 	}
 
 	&__platformImg {
+		width: 50%;
 		img {
 			height: 50rem;
 		}
@@ -254,7 +311,8 @@ nav {
 		border-radius: 5px;
 		padding: 2rem 5rem;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: $color-1;
 			color: $color-3;
 		}
@@ -299,12 +357,19 @@ nav {
 ============================== */
 
 .getStarted {
-	text-align: center;
-	color: $color-5;
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: $color-5;
+	}
 
 	&__copy {
-		padding: 0 20rem;
+		text-align: center;
+		width: 60%;
 	}
+
 	&__buttonLink {
 		margin-top: 5rem;
 	}

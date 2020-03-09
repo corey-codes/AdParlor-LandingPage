@@ -1,0 +1,154 @@
+@media (max-width: 1000px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	nav {
+		position: sticky;
+		top: 0;
+	}
+
+	.navBar {
+		&__menuLists {
+			position: fixed;
+			right: 0px;
+			top: 0vh;
+			height: 100vh;
+			width: 90%;
+			padding: 5rem;
+			background-color: $color-1;
+			z-index: 10;
+			transform: translateX(100%);
+			transition: transform 0.3s ease-in;
+		}
+
+		&__menu--mobileActive {
+			transform: translateX(0%);
+		}
+
+		&__menuLists {
+			flex-direction: column;
+			align-items: center;
+			justify-content: initial;
+			padding-right: 2rem;
+		}
+
+		&__menuLeft,
+		&__menuRight {
+			flex-direction: column;
+
+			li {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+
+		&__menuItem {
+			opacity: 0;
+			padding: 2rem 0;
+			border-bottom: 2px solid $color-2;
+
+			a:hover {
+				color: $color-2;
+			}
+		}
+
+		&__mobileNav {
+			display: block;
+			z-index: 20;
+		}
+
+		// FADE EFFECT ANIMATION
+		@keyframes navLinkFade {
+			from {
+				opacity: 0;
+				transform: translateX(5rem);
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0rem);
+			}
+		}
+
+		// BURGER TO X MENU TRANSITION
+		&__mobileBurger--toExit .navBar__mobileBurger--line1 {
+			transform: rotate(-45deg) translate(-9px, 6px);
+		}
+
+		&__mobileBurger--toExit .navBar__mobileBurger--line2 {
+			opacity: 0;
+		}
+
+		&__mobileBurger--toExit .navBar__mobileBurger--line3 {
+			transform: rotate(45deg) translate(-8px, -6px);
+		}
+	}
+}
+
+@media (max-width: 760px) {
+	.intro,
+	.mediaBuy,
+	.social__facebook,
+	.social__instagram,
+	.social__youTube,
+	.quotes,
+	.getStarted {
+		padding: 5rem 5rem;
+	}
+
+	.intro {
+		flex-direction: column;
+
+		&__businessImg {
+			margin-left: 0;
+			height: auto;
+
+			img {
+				height: 40rem;
+			}
+		}
+
+		&__content {
+			width: 100%;
+		}
+	}
+
+	.mediaBuy {
+		&__copy {
+			width: 80%;
+		}
+	}
+
+	.social {
+		&__facebook,
+		&__instagram,
+		&__youTube {
+			flex-direction: column;
+		}
+
+		&__facebookCopy,
+		&__instagramCopy,
+		&__youTubeCopy {
+			width: 100%;
+		}
+	}
+
+	.quotes {
+		&__hills {
+			flex-direction: column;
+			padding: 0;
+		}
+
+		&__hillsCopy {
+			width: 90%;
+			margin-left: 0;
+			margin-top: 3rem;
+		}
+	}
+
+	.getStarted {
+		&__copy {
+			width: 80%;
+		}
+	}
+}

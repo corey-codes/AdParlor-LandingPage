@@ -14,51 +14,62 @@
 
 	<!-- BODY -->
 	<body>
-		<!-- NAVIGATION -->
-		<nav>
-			<div class="navBar wrapper" id="navBar">
-				<!-- NAV LOGO  -->
-				<div class="navBar__navLeft">
+		<!-- HEADER -->
+		<header>
+			<!-- NAV BAR -->
+			<nav>
+				<div class="navBar wrapper" id="navBar">
+					<!-- NAV LOGO  -->
 					<div class="navBar__logo">
-						<a href="#home"
+						<a href="#"
 							><img src="./assets/adparlor-logo.svg" alt="AdParlor logo"
 						/></a>
 					</div>
 
 					<div class="navBar__menuLists">
 						<!-- MENU LEFT -->
-						<ul class="navBar__menuLeft">
-							<li>
-								<a href="#mediaBuying">Media Buying</a>
-							</li>
+						<div class="navBar__menu">
+							<ul class="navBar__menuLeft">
+								<li class="navBar__menuItem">
+									<a href="#mediaBuy">Media Buying</a>
+								</li>
+								<li class="navBar__menuItem">
+									<a href="#">Creative at Scale</a>
+								</li>
+								<li class="navBar__menuItem">
+									<a href="#">Audit Services</a>
+								</li>
+							</ul>
+						</div>
 
-							<li>
-								<a href="#">Creative at Scale</a>
-							</li>
-
-							<li>
-								<a href="#">Audit Services</a>
-							</li>
-						</ul>
+						<!-- MENU RIGHT -->
+						<div class="navBar__menu">
+							<ul class="navBar__menuRight">
+								<li class="navBar__menuItem">
+									<a href="#">Ad Mockups</a>
+								</li>
+								<li class="navBar__menuItem">
+									<a href="#">About</a>
+								</li>
+								<li class="navBar__menuItem">
+									<a href="#">Blog</a>
+								</li>
+							</ul>
+						</div>
 					</div>
-
-					<!-- MENU RIGHT -->
-					<ul class="navBar__menuRight">
-						<li>
-							<a href="#">Ad Mockups</a>
-						</li>
-
-						<li>
-							<a href="#">About</a>
-						</li>
-
-						<li>
-							<a href="#">Blog</a>
-						</li>
-					</ul>
 				</div>
-			</div>
-		</nav>
+
+				<!-- MOBILE NAV -->
+				<div class="navBar__mobileNav">
+					<div class="navBar__mobileNavContainer">
+						<span class="navBar__mobileBurger--line1"></span>
+						<span class="navBar__mobileBurger--line2"></span>
+						<span class="navBar__mobileBurger--line3"></span>
+					</div>
+				</div>
+			</nav>
+			<!-- END NAV BAR -->
+		</header>
 
 		<!-- MAIN SECTION -->
 		<main class="main" id="main">
@@ -156,7 +167,7 @@
 					</div>
 
 					<div class="social__platformImg">
-						<img src="./assets/facebook.svg" alt="" />
+						<img src="./assets/instagram.svg" alt="" />
 					</div>
 				</div>
 				<!-- END INSTAGRAM -->
@@ -180,7 +191,7 @@
 					</div>
 
 					<div class="social__platformImg">
-						<img src="./assets/facebook.svg" alt="" />
+						<img src="./assets/display-youtube.svg" alt="" />
 					</div>
 				</div>
 				<!-- END YOUTUBE -->
@@ -212,21 +223,26 @@
 
 			<!-- GET STARTED -->
 			<section class="getStarted" id="getStarted">
-				<div class="getStarted__copy">
-					<h2>Get Started</h2>
+				<div class="getStarted__content">
+					<div class="getStarted__copy">
+						<h2>Get Started</h2>
 
-					<p>
-						Ready to take your digital media buying to the next level? AdParlor
-						can help you get the best results from paid social, video and
-						display advertising.
-					</p>
-				</div>
+						<p>
+							Ready to take your digital media buying to the next level?
+							AdParlor can help you get the best results from paid social, video
+							and display advertising.
+						</p>
+					</div>
 
-				<div class="getStarted__buttonLink">
-					<a href="#" class="intro__button--pink">Get Started</a>
+					<div class="getStarted__buttonLink">
+						<a href="#" class="intro__button--pink">Get Started</a>
+					</div>
 				</div>
 			</section>
 			<!-- GET STARTED -->
 		</main>
+
+		<!-- JAVASCRIPT -->
+		<script src="./script/script.js"></script>
 	</body>
 </html>
