@@ -43,7 +43,8 @@ h1,
 h2,
 h3,
 p,
-a {
+a,
+cite {
 	font-family: $font-1;
 	line-height: 1.5;
 	letter-spacing: 0.5px;
@@ -69,7 +70,8 @@ h3 {
 }
 
 p,
-a {
+a,
+cite {
 	font-size: 1.6rem;
 }
 
@@ -87,6 +89,10 @@ a:focus {
 	border-radius: 5px;
 }
 
+.italic {
+	font-style: italic;
+}
+
 /* ==============================
    NAV BAR
 ============================== */
@@ -96,7 +102,8 @@ nav {
 	border-top: 1px solid $color-2;
 	padding: 2rem;
 	display: flex;
-	// position: fixed;
+	position: fixed;
+	width: 100%;
 }
 
 .navBar {
@@ -186,7 +193,8 @@ nav {
 .social__instagram,
 .social__youTube,
 .quotes,
-.getStarted {
+.getStarted,
+.clients {
 	padding: 10rem 5rem;
 }
 
@@ -260,8 +268,14 @@ nav {
 		margin-top: 4rem;
 
 		img {
-			height: 3rem;
+			height: 8rem;
+			padding: 2rem;
 			transform: rotate(0.75turn);
+
+			&:hover {
+				background-color: $color-2;
+				border-radius: 5%;
+			}
 		}
 	}
 }
@@ -320,35 +334,110 @@ nav {
 }
 
 /* ==============================
-   QUOTES
+   CLIENTS
 ============================== */
-
-.quotes {
+.clients {
+	background-color: $color-7;
 	color: $color-3;
-	background-image: url("https://1d6uol1756s63dcmhp5yd8og-wpengine.netdna-ssl.com/wp-content/uploads/2018/06/BG_Hills_Banner.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	height: 70rem;
-	display: flex;
-	justify-content: center;
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: minmax(300px, auto);
+		column-gap: 2rem;
+		row-gap: 2rem;
+		grid-template-areas:
+			"clientA clientB"
+			"clientA clientC";
+	}
+
+	&__quote {
+		&::before {
+			content: open-quote;
+			display: inline;
+			height: 0;
+			line-height: 0;
+			left: -10px;
+			position: relative;
+			top: 30px;
+			color: $color-2;
+			font-size: 5em;
+		}
+
+		&::after {
+			content: close-quote;
+			display: inline;
+			height: 0;
+			line-height: 0;
+			left: 10px;
+			position: relative;
+			top: 35px;
+			color: $color-2;
+			font-size: 5em;
+		}
+	}
 
 	&__hills {
+		grid-area: clientA;
+		padding: 4rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0 10rem;
+		background-image: url("https://1d6uol1756s63dcmhp5yd8og-wpengine.netdna-ssl.com/wp-content/uploads/2018/06/BG_Hills_Banner.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 	}
 
-	&__hillsCopy {
-		margin-left: 5rem;
-		width: 70%;
+	&__hillsContent {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__hillsLogo {
+		width: 100%;
+		margin: 1rem;
+
 		img {
 			height: 10rem;
 		}
+	}
+
+	&__photoSquared {
+		grid-area: clientB;
+		padding: 4rem;
+		background-image: url("https://1d6uol1756s63dcmhp5yd8og-wpengine.netdna-ssl.com/wp-content/uploads/2018/06/BG_Photosquared.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__photoSquaredLogo {
+		width: 100%;
+		margin: 1rem;
+
+		img {
+			height: 5rem;
+		}
+	}
+
+	&__shoppingChannel {
+		grid-area: clientC;
+		padding: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-image: url("/assets/ClientLogosAndMedia/BG_TSC_Instagram-Case-Study.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__shoppingChannelLogo {
+		width: 30%;
+		margin: 1rem auto;
 	}
 }
 
