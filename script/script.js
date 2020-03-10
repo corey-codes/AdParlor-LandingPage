@@ -10,8 +10,6 @@ const mobileOpen = () => {
   const navMenus = document.querySelector('.navBar__menuLists');
   const navLinks = document.querySelectorAll('.navBar__menuItem');
   
-
-  // ADD LINKS TO MOBILE MENU *******
   const mobileLinks = [];
   mobileLinks.push(mobileNav, navLinks);
 

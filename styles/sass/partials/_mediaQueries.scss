@@ -1,11 +1,10 @@
 @media (max-width: 1150px) {
 	.clients {
 		&__container {
-
 			grid-template-areas:
-			"clientA clientA"
-			"clientB clientB"
-			"clientC clientC";
+				"clientA clientA"
+				"clientB clientB"
+				"clientC clientC";
 		}
 	}
 }
@@ -21,8 +20,8 @@
 			right: 0px;
 			top: 0vh;
 			height: 100vh;
-			width: 90%;
-			padding: 5rem;
+			width: 100%;
+			padding: 10rem 5rem;
 			background-color: $color-1;
 			z-index: 10;
 			transform: translateX(100%);
@@ -90,9 +89,19 @@
 			transform: rotate(45deg) translate(-8px, -6px);
 		}
 	}
+
+	.intro {
+		&__businessImg {
+			width: calc(50% - 2rem);
+		}
+
+		&__content {
+			width: 50%;
+		}
+	}
 }
 
-@media (max-width: 760px) {
+@media (max-width: 850px) {
 	.intro,
 	.mediaBuy,
 	.social__facebook,
@@ -100,11 +109,28 @@
 	.social__youTube,
 	.quotes,
 	.getStarted {
-		padding: 5rem 5rem;
+		padding: 5rem 3rem;
+	}
+
+	&__mobileNav {
+		right: 1rem;
+	}
+
+	h1,
+	h2 {
+		font-size: 4rem;
+	}
+
+	.lineBreak::before {
+		content: "";
 	}
 
 	.intro {
 		flex-direction: column;
+
+		p {
+			font-size: 2rem;
+		}
 
 		&__businessImg {
 			margin-left: 0;
@@ -160,6 +186,18 @@
 	.getStarted {
 		&__copy {
 			width: 80%;
+		}
+	}
+}
+
+@media (max-width: 520px) {
+	.clients {
+		padding: 10rem 1rem;
+
+		&__hills,
+		&__photoSquared,
+		&__shoppingChannel {
+			padding: 4rem 0.5rem;
 		}
 	}
 }
